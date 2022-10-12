@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+.nav_container{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #2c2c2c;
+}
+.nav_container .logo span{
+    color: #fff;
+    font-size: 40px;
+}
+.tablet_nav{
+    display: flex;
+}
+.tablet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tablet a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-decoration: none;
+    color: #fefefe;
+    transition: 1s;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.tablet a:hover{
+    color: #2c2c2c;
+    background-color: #fefefe;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.tablet a:active{
+    color: #2c2c2c;
+    background:#000000;
+}
+.tablet_nav h1{
+    display: none;
+}
+/* Hamburger menu Tag Start */
+@media only screen and (max-width: 1024px){
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line{
+        width: 40px;
+        height: 4px;
+        background: #fefefe;
+        margin: 8px 0;
+    }
+    .tablet_nav{
+        height: 400px;
+        position: absolute;
+        top: 72px;
+        right: 0;
+        left: 0;
+        width: 100vm;
+        transition: 0.9s;
+        background: #000000;
+        display: none;
+    }
+    .tablet_nav a{
+        border-bottom: none;
+        position: relative;
+        top: 0;
+        left: 60px;
+        margin: 50px  auto auto;
+        text-align: center;
+        cursor: pointer;
+    }
+    .hamburger .active{
+        height: 350px;
+    }
+}
+/* Hamburger menu Tag End */
+
+    /* Tablet App START */
+@media only screen and (max-width: 1050px){
+    .tablet_nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background: #2c2c2c;
+        z-index: 4;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        width: 0;
+        overflow-y: hidden;
+    }
+    .tablet{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 60%;
+        align-items: center;
+    }
+    .tablet a{
+        color: #ffff;
+        text-decoration: none;
+        font-size: 10px;
+        font-family: sans-serif;
+        cursor: pointer;
+    }
+    .tablet_nav h1{
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 50px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+}
+/* Tablet App END */
+.about{
+    width: 100%;
+    height: 100%;
+    padding: 130px 0px;
+    background-color: #2c2c2c;
+}
+.about img{
+    height:100%;
+    width: 30%;
+    border-radius: 20px;
+}
+.about_text{
+    width: 600px;
+    padding-bottom: 50px;
+}
+.main{
+    width: 1500px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+
+}
+.about_text h1, h5, p{
+    color: #ffff;
+
+}
+.about_text h1{
+    font-size: 70px;
+}
+.about h5 span{
+    color: red;
+}
+.about_text h5{
+    font-size: 20px;
+}
+.about_text p{
+    letter-spacing: 2px;
+    line-height: 25px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.btn_btn{
+   background-color: #0f2027;
+   color: #fff;
+   text-decoration: none;
+   border: 2px solid transparent;
+   font-weight: 400px;
+   padding-top: 15px 40px;
+   padding: 15px 20px;
+   border-radius: 10px;
+   cursor: pointer;
+}
+.btn_btn:hover{
+    background-color: transparent;
+    border: 2px solid #eeeef5;
+}
+
+/* Mobile Responsive About Tag */
+@media only screen and (max-width: 1050px){
+    .about{
+        width: 100%;
+        height: 100%;
+        background-color: #2c2c2c;
+    }
+    .about img{
+        height: auto;
+        width: 270px;
+        border-radius: 60px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 150px;
+        bottom: 50px;
+    }
+    .about_text{
+        width: 550px;
+        padding-bottom: 60px;
+        text-align:center;
+    }
+    .main{
+        width: 1110px;
+        max-width: 90%;
+        margin: 2px auto;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    .about_text h1, h5, p{
+        color: #fefefe;
+        font-size: 1rem;;
+    }
+    .about_text h1{
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+    .about h5 span{
+        color: red;
+    }
+    .about_text h5{
+        font-size: 20px;
+    }
+    .about_text p{
+        letter-spacing: 2px;
+        line-height: 25px;
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    .btn_btn{
+        background-color: #0f2027;
+        color: #fff;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: 400px;
+        padding-top: 15px 40px;
+        padding: 15px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+     }
+     .btn_btn:hover{
+         background-color: transparent;
+         border: 2px solid #eeeef5;
+     }
+}
+
+/* Our Service styling */
+.service{
+    background: #2c2c2c;
+    width: auto;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+.service_title h2{
+    color: #fefefe;
+    font-size: 50px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+}
+.card {
+    height: 365px;
+    width: 335px;
+    padding: 20px 35px;
+    background: #4a4949;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 20px;
+
+}
+.card i{
+    display: block;
+    font-size: 40px;
+    margin: 20px 50px;
+    text-align: center;
+    color: #b91d73;
+}
+.card h4{
+    color: #fefefe;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.pre p{
+    width:340px;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 20px;
+}
+.pre a{
+    text-decoration: none;
+    color: #fefefe;
+    background: #0f2027;
+    padding: 15px 40px;
+    margin: 100px 20px; 
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.pre a:hover{
+    color: #eeeef5;
+    background: transparent;
+    border: 2px solid #eeeef5;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1050px){
+    .service{
+        background:#2c2c2c;
+        width: 100%;
+        padding: 5px 0px;
+        overflow: hidden;
+    }
+    .service_title h2{
+      display: none;
+    }
+    .box{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        min-height: 350px;
+        margin: 50px 50px;
+    }
+    .card{
+        height: 430px;
+        width: 350px;
+        padding: 20px 50px;
+        background: #4a4949;
+        margin: 40px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+    .card i{
+        display: block;
+        font-size: 40px;
+        color: #fefefe;
+        margin: 30px 50px;
+        text-align: center;
+    }
+    .card h4{
+        font-size: 30px;
+        font-style: normal;
+        text-transform: uppercase;
+        color: #fefefe;
+        letter-spacing: 10px;
+    }
+    .pre p{
+        width: 360px;
+        text-align: center;
+        letter-spacing: 2px;
+        padding: 15px;
+    }
+    .pre a{
+        text-decoration: none;
+        color: #fefefe;
+        background: #0f2027;
+        padding: 15px 20px;
+        margin: 10px; 
+        text-align: center;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .pre a:hover{
+        color: #eeeef5;
+        background: transparent;
+        border: 2px solid #eeeef5;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+}
+/*-----Projects handled Start--- */
+.project{
+    background: #2c2c2c;
+    width: auto;
+    padding: 20px 5px;
+    overflow: hidden;
+}
+.box_card img{
+    border-radius: 10px;
+    transition: transform 2s;
+    max-width: 440px;
+}
+.box_container{
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 300fr 300fr 200fr;
+    align-items: center;
+    padding: 30px 20px;
+    margin: 10px;
+    gap: 1rem;
+}
+.project_title{
+    color: #fefefe;
+    font-size: 30px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+.box_card img:hover{
+   transform: scale(0.9) ;
+}
+.box_card a{
+    padding: 12px 40px;
+    margin: 50px 10px; 
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    background: #0f2027;
+    color: #fefefe;
+    cursor: pointer;
+}
+.box_card a:hover{
+    color: #eeeef5;
+    background: transparent;
+    border: 2px solid #eeeef5;
+    cursor: pointer;
+}
+.box_card h2{
+    width: 300px;
+    height: 50px;
+    color: #fefefe;
+    font-size: 30px;
+    margin: 5px;
+}
+.box_card p{
+    width: 450px;
+    height: auto;
+    padding: 0px 0px 20px;
+}
+/*-----Projects handled Start--- */
+
+
+@media only screen and (max-width: 1050px){
+    .project{
+        background: #2c2c2c;
+        width: auto;
+        padding: 20px 5px;
+        overflow: hidden;
+    }
+    .box_card img{
+        max-width: 600px;
+        height: 300px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        border-radius: 25px;
+        transition: transform 1s;
+        padding: 20px 8px;
+    }
+    .box_container{
+        width: 600px;
+        display: block;
+        align-items: center;
+        padding: 10px 15px;
+        margin: 5px;
+    }
+    .project_title h1{
+        color: #fefefe;
+        width: 400px;
+        height: 100px;
+        margin: 30px 40px;
+        font-size: 60px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .box_card img:hover{
+        transform: scale(0.9);
+    }
+    .box_card a{
+        color: #eeeef5;
+        padding: 15px 40px;
+        text-align: center;
+        text-decoration: none;
+        background: #0f2027;
+        margin: 10px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    .box_card a:hover{
+        color: #eeeef5;
+        background: transparent;
+        border: 2px solid #eeeef5;
+        cursor: pointer;
+    }
+    .box_card h2{
+        color: #eeeef5;
+        width: 50%;
+        height: 50px;
+        font-size: 30px;
+        margin: 30px 10px;
+    }
+    .box_card p{
+        width: 600px;
+        height: 80px;
+        padding: 0px 5px 0px 10px;
+    }
+}
+/* GET in Touch start */
+.touch_title{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items:center;
+    justify-content: space-around;
+    background: #2c2c2c;
+}
+.form .form_title{
+    flex-direction: column;
+    display: flex;
+    padding: 8px 5px;
+}
+.form_title input{
+    width: 450px;
+    height: 40px;
+    border-radius: 5px;
+    color: #fefefe;
+}
+.textarea textarea{
+    height: 300px;
+    width: 140%;
+    box-shadow: 0px 0px 5px 6px rgba(34, 34, 35, 0.2);
+    padding: 10px 20px;
+    margin: 20px 6px;
+    border-radius: 10px;
+    background: #2c2c2c;
+    color: #fefefe;
+}
+.touch h1{
+    font-size: 33px;
+    padding: 0px 10px;
+    text-transform: uppercase;
+    color: #fefefe;
+}
+.touch_title a{
+    padding: 12px 40px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    background: #0f2027;
+    color: #fefefe;
+    cursor: pointer;
+}
+.touch_title a:hover{
+    color: #eeeef5;
+    background: #0f2027;
+    border: 2px solid #232333;
+    cursor: pointer;
+}
+/* GET in Touch End */
+
+/* GET in Touch Tablet Start */
+@media only screen and (max-width: 1050px){
+    .touch_title{
+        width: 100%;
+        height: 100vh;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        background: #2c2c2c;
+        padding: 2px 0px;
+    }
+    .form .form_title{
+        flex-direction: column;
+        display: flex;
+        padding: 8px 5px;
+    }
+    .form_title input{
+        width: 400px;
+        height: 35px;
+        border-radius: 5px;
+        color: #fefefe;
+    }
+    .textarea textarea{
+        height: 350px;
+        width: 90%;
+        padding: 15px 2px;
+        margin: 20px 25px;
+        border-radius: 10px;
+        background: #2c2c2c;
+        color: #fefefe;
+    }
+    .touch h1{
+        font-size: 33xpx;
+        color: #fefefe;
+        padding: 0px 10px;
+        text-transform: uppercase;
+    }
+    .touch_title a{
+        padding: 12px 40px;
+        text-align: center;
+        border-radius: 8px;
+        text-decoration: none;
+        background: #0f2027;
+        color: #fefefe;
+        cursor: pointer;
+    }
+    .touch_title a:hover{
+        color: #eeeef5;
+        background: #0f2027;
+        border: 2px solid #232333;
+        cursor: pointer;
+    }
+}
+/* GET in Touch Tablet End */
+
+/* Footer Icon start */
+.icons{
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2c2c2c;
+    padding: 20px 50px;
+}
+.icon_details {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.icon_t i{
+    width: 100%;
+    font-size: 3rem;
+    color: #fefefe;
+}
+.icon_t i:hover{
+    width: 30px;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(247, 173, 173, 0.3);
+}
+.contact_title{
+    width: 500px;
+    height: 200px;
+}
+.contact_ h5{
+    width: 450px;
+    height: 50px;
+    font-size: 2rem;
+    border-bottom: 2px solid;
+    text-transform: uppercase;
+}
+/* Footer Icon End */
+
+/* Footer Icon Tablet Start */
+@media only screen and (max-width: 1050px){
+    .icons{
+        height: 500px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        background: #2c2c2c;
+        padding: 20px 50px;
+    }
+    .icon_details{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px 10px;
+    }
+    .icon_t i{
+        width: 100%;
+        font-size: 3rem;
+        color: #fefefe;
+    }
+    .icon_t i:hover{
+        width: 30px;
+        border-radius: 10px;
+        box-shadow: 0 20px 30px rgba(247, 173, 173, 0.3);
+    }
+    .contact_title{
+        width: 600px;
+        height: 250px;
+    }
+    .contact_ h5{
+        width: 500px;
+        height: 50px;
+        font-size: 2rem;
+        border-bottom: 2px solid;
+        text-transform: uppercase;
+    }
+}
+/* Footer Icon Tablet End */
